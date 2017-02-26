@@ -1,0 +1,1866 @@
+
+========================================================================================
+Functions in lower version
+========================================================================================
+
+86 :  session *
+cmd_find_try_TMUX(struct client *c, struct window *w)
+{
+113 : static int
+cmd_find_client_better(struct client *c, struct client *than)
+{
+122 :  client *
+cmd_find_best_client(struct client **clist[], u_int csize)
+{
+148 : static int
+cmd_find_session_better(struct session *s, struct session *than, int flags)
+{
+166 :  session *
+cmd_find_best_session(struct session **slist, u_int ssize, int flags)
+{
+188 : static int
+cmd_find_best_session_with_window(struct cmd_find_state *fs)
+{
+225 : static int
+cmd_find_best_winlink_with_window(struct cmd_find_state *fs)
+{
+249 : static int
+cmd_find_current_session_with_client(struct cmd_find_state *fs)
+{
+313 : static int
+cmd_find_current_session(struct cmd_find_state *fs)
+{
+343 :  client *
+cmd_find_current_client(struct cmdq_item *item)
+{
+402 : static int
+cmd_find_get_session(struct cmd_find_state *fs, const char *session)
+{
+466 : static int
+cmd_find_get_window(struct cmd_find_state *fs, const char *window)
+{
+502 : static int
+cmd_find_get_window_with_session(struct cmd_find_state *fs, const char *window)
+{
+653 : static int
+cmd_find_get_pane(struct cmd_find_state *fs, const char *pane)
+{
+690 : static int
+cmd_find_get_pane_with_session(struct cmd_find_state *fs, const char *pane)
+{
+717 : static int
+cmd_find_get_pane_with_window(struct cmd_find_state *fs, const char *pane)
+{
+800 : 
+void
+cmd_find_clear_state(struct cmd_find_state *fs, struct cmdq_item *item,
+    int flags)
+{
+812 : 
+int
+cmd_find_empty_state(struct cmd_find_state *fs)
+{
+821 : 
+int
+cmd_find_valid_state(struct cmd_find_state *fs)
+{
+848 : 
+void
+cmd_find_copy_state(struct cmd_find_state *dst, struct cmd_find_state *src)
+{
+859 : 
+void
+cmd_find_log_state(const char *prefix, struct cmd_find_state *fs)
+{
+882 : 
+int
+cmd_find_from_session(struct cmd_find_state *fs, struct session *s)
+{
+898 : 
+int
+cmd_find_from_winlink(struct cmd_find_state *fs, struct session *s,
+    struct winlink *wl)
+{
+914 : 
+int
+cmd_find_from_session_window(struct cmd_find_state *fs, struct session *s,
+    struct window *w)
+{
+930 : 
+int
+cmd_find_from_window(struct cmd_find_state *fs, struct window *w)
+{
+947 : 
+int
+cmd_find_from_pane(struct cmd_find_state *fs, struct window_pane *wp)
+{
+961 : 
+int
+cmd_find_current(struct cmd_find_state *fs, struct cmdq_item *item, int flags)
+{
+979 : 
+int
+cmd_find_target(struct cmd_find_state *fs, struct cmd_find_state *current,
+    struct cmdq_item *item, const char *target, enum cmd_find_type type,
+    int flags)
+{
+1245 :  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{
+1378 :  session *
+cmd_find_try_TMUX(struct client *c, struct window *w)
+{
+1405 : static int
+cmd_find_client_better(struct client *c, struct client *than)
+{
+1414 :  client *
+cmd_find_best_client(struct client **clist[], u_int csize)
+{
+1440 : static int
+cmd_find_session_better(struct session *s, struct session *than, int flags)
+{
+1458 :  session *
+cmd_find_best_session(struct session **slist, u_int ssize, int flags)
+{
+1480 : static int
+cmd_find_best_session_with_window(struct cmd_find_state *fs)
+{
+1517 : static int
+cmd_find_best_winlink_with_window(struct cmd_find_state *fs)
+{
+1541 : static int
+cmd_find_current_session_with_client(struct cmd_find_state *fs)
+{
+1605 : static int
+cmd_find_current_session(struct cmd_find_state *fs)
+{
+1635 :  client *
+cmd_find_current_client(struct cmdq_item *item)
+{
+1694 : static int
+cmd_find_get_session(struct cmd_find_state *fs, const char *session)
+{
+1758 : static int
+cmd_find_get_window(struct cmd_find_state *fs, const char *window)
+{
+1794 : static int
+cmd_find_get_window_with_session(struct cmd_find_state *fs, const char *window)
+{
+1945 : static int
+cmd_find_get_pane(struct cmd_find_state *fs, const char *pane)
+{
+1982 : static int
+cmd_find_get_pane_with_session(struct cmd_find_state *fs, const char *pane)
+{
+2009 : static int
+cmd_find_get_pane_with_window(struct cmd_find_state *fs, const char *pane)
+{
+2092 : 
+void
+cmd_find_clear_state(struct cmd_find_state *fs, struct cmdq_item *item,
+    int flags)
+{
+2104 : 
+int
+cmd_find_empty_state(struct cmd_find_state *fs)
+{
+2113 : 
+int
+cmd_find_valid_state(struct cmd_find_state *fs)
+{
+2140 : 
+void
+cmd_find_copy_state(struct cmd_find_state *dst, struct cmd_find_state *src)
+{
+2151 : 
+void
+cmd_find_log_state(const char *prefix, struct cmd_find_state *fs)
+{
+2174 : 
+int
+cmd_find_from_session(struct cmd_find_state *fs, struct session *s)
+{
+2190 : 
+int
+cmd_find_from_winlink(struct cmd_find_state *fs, struct session *s,
+    struct winlink *wl)
+{
+2206 : 
+int
+cmd_find_from_session_window(struct cmd_find_state *fs, struct session *s,
+    struct window *w)
+{
+2222 : 
+int
+cmd_find_from_window(struct cmd_find_state *fs, struct window *w)
+{
+2239 : 
+int
+cmd_find_from_pane(struct cmd_find_state *fs, struct window_pane *wp)
+{
+2253 : 
+int
+cmd_find_current(struct cmd_find_state *fs, struct cmdq_item *item, int flags)
+{
+2271 : 
+int
+cmd_find_target(struct cmd_find_state *fs, struct cmd_find_state *current,
+    struct cmdq_item *item, const char *target, enum cmd_find_type type,
+    int flags)
+{
+2537 :  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{
+2670 :  session *
+cmd_find_try_TMUX(struct client *c, struct window *w)
+{
+2697 : static int
+cmd_find_client_better(struct client *c, struct client *than)
+{
+2706 :  client *
+cmd_find_best_client(struct client **clist[], u_int csize)
+{
+2732 : static int
+cmd_find_session_better(struct session *s, struct session *than, int flags)
+{
+2750 :  session *
+cmd_find_best_session(struct session **slist, u_int ssize, int flags)
+{
+2772 : static int
+cmd_find_best_session_with_window(struct cmd_find_state *fs)
+{
+2809 : static int
+cmd_find_best_winlink_with_window(struct cmd_find_state *fs)
+{
+2833 : static int
+cmd_find_current_session_with_client(struct cmd_find_state *fs)
+{
+2897 : static int
+cmd_find_current_session(struct cmd_find_state *fs)
+{
+2927 :  client *
+cmd_find_current_client(struct cmdq_item *item)
+{
+2986 : static int
+cmd_find_get_session(struct cmd_find_state *fs, const char *session)
+{
+3050 : static int
+cmd_find_get_window(struct cmd_find_state *fs, const char *window)
+{
+3086 : static int
+cmd_find_get_window_with_session(struct cmd_find_state *fs, const char *window)
+{
+3237 : static int
+cmd_find_get_pane(struct cmd_find_state *fs, const char *pane)
+{
+3274 : static int
+cmd_find_get_pane_with_session(struct cmd_find_state *fs, const char *pane)
+{
+3301 : static int
+cmd_find_get_pane_with_window(struct cmd_find_state *fs, const char *pane)
+{
+3384 : 
+void
+cmd_find_clear_state(struct cmd_find_state *fs, struct cmdq_item *item,
+    int flags)
+{
+3396 : 
+int
+cmd_find_empty_state(struct cmd_find_state *fs)
+{
+3405 : 
+int
+cmd_find_valid_state(struct cmd_find_state *fs)
+{
+3432 : 
+void
+cmd_find_copy_state(struct cmd_find_state *dst, struct cmd_find_state *src)
+{
+3443 : 
+void
+cmd_find_log_state(const char *prefix, struct cmd_find_state *fs)
+{
+3466 : 
+int
+cmd_find_from_session(struct cmd_find_state *fs, struct session *s)
+{
+3482 : 
+int
+cmd_find_from_winlink(struct cmd_find_state *fs, struct session *s,
+    struct winlink *wl)
+{
+3498 : 
+int
+cmd_find_from_session_window(struct cmd_find_state *fs, struct session *s,
+    struct window *w)
+{
+3514 : 
+int
+cmd_find_from_window(struct cmd_find_state *fs, struct window *w)
+{
+3531 : 
+int
+cmd_find_from_pane(struct cmd_find_state *fs, struct window_pane *wp)
+{
+3545 : 
+int
+cmd_find_current(struct cmd_find_state *fs, struct cmdq_item *item, int flags)
+{
+3563 : 
+int
+cmd_find_target(struct cmd_find_state *fs, struct cmd_find_state *current,
+    struct cmdq_item *item, const char *target, enum cmd_find_type type,
+    int flags)
+{
+3829 :  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{
+3962 :  session *
+cmd_find_try_TMUX(struct client *c, struct window *w)
+{
+3989 : static int
+cmd_find_client_better(struct client *c, struct client *than)
+{
+3998 :  client *
+cmd_find_best_client(struct client **clist[], u_int csize)
+{
+4024 : static int
+cmd_find_session_better(struct session *s, struct session *than, int flags)
+{
+4042 :  session *
+cmd_find_best_session(struct session **slist, u_int ssize, int flags)
+{
+4064 : static int
+cmd_find_best_session_with_window(struct cmd_find_state *fs)
+{
+4101 : static int
+cmd_find_best_winlink_with_window(struct cmd_find_state *fs)
+{
+4125 : static int
+cmd_find_current_session_with_client(struct cmd_find_state *fs)
+{
+4189 : static int
+cmd_find_current_session(struct cmd_find_state *fs)
+{
+4219 :  client *
+cmd_find_current_client(struct cmdq_item *item)
+{
+4278 : static int
+cmd_find_get_session(struct cmd_find_state *fs, const char *session)
+{
+4342 : static int
+cmd_find_get_window(struct cmd_find_state *fs, const char *window)
+{
+4378 : static int
+cmd_find_get_window_with_session(struct cmd_find_state *fs, const char *window)
+{
+4529 : static int
+cmd_find_get_pane(struct cmd_find_state *fs, const char *pane)
+{
+4566 : static int
+cmd_find_get_pane_with_session(struct cmd_find_state *fs, const char *pane)
+{
+4593 : static int
+cmd_find_get_pane_with_window(struct cmd_find_state *fs, const char *pane)
+{
+4676 : 
+void
+cmd_find_clear_state(struct cmd_find_state *fs, struct cmdq_item *item,
+    int flags)
+{
+4688 : 
+int
+cmd_find_empty_state(struct cmd_find_state *fs)
+{
+4697 : 
+int
+cmd_find_valid_state(struct cmd_find_state *fs)
+{
+4724 : 
+void
+cmd_find_copy_state(struct cmd_find_state *dst, struct cmd_find_state *src)
+{
+4735 : 
+void
+cmd_find_log_state(const char *prefix, struct cmd_find_state *fs)
+{
+4758 : 
+int
+cmd_find_from_session(struct cmd_find_state *fs, struct session *s)
+{
+4774 : 
+int
+cmd_find_from_winlink(struct cmd_find_state *fs, struct session *s,
+    struct winlink *wl)
+{
+4790 : 
+int
+cmd_find_from_session_window(struct cmd_find_state *fs, struct session *s,
+    struct window *w)
+{
+4806 : 
+int
+cmd_find_from_window(struct cmd_find_state *fs, struct window *w)
+{
+4823 : 
+int
+cmd_find_from_pane(struct cmd_find_state *fs, struct window_pane *wp)
+{
+4837 : 
+int
+cmd_find_current(struct cmd_find_state *fs, struct cmdq_item *item, int flags)
+{
+4855 : 
+int
+cmd_find_target(struct cmd_find_state *fs, struct cmd_find_state *current,
+    struct cmdq_item *item, const char *target, enum cmd_find_type type,
+    int flags)
+{
+5121 :  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{
+5254 :  session *
+cmd_find_try_TMUX(struct client *c, struct window *w)
+{
+5281 : static int
+cmd_find_client_better(struct client *c, struct client *than)
+{
+5290 :  client *
+cmd_find_best_client(struct client **clist[], u_int csize)
+{
+5316 : static int
+cmd_find_session_better(struct session *s, struct session *than, int flags)
+{
+5334 :  session *
+cmd_find_best_session(struct session **slist, u_int ssize, int flags)
+{
+5356 : static int
+cmd_find_best_session_with_window(struct cmd_find_state *fs)
+{
+5393 : static int
+cmd_find_best_winlink_with_window(struct cmd_find_state *fs)
+{
+5417 : static int
+cmd_find_current_session_with_client(struct cmd_find_state *fs)
+{
+5481 : static int
+cmd_find_current_session(struct cmd_find_state *fs)
+{
+5511 :  client *
+cmd_find_current_client(struct cmdq_item *item)
+{
+5570 : static int
+cmd_find_get_session(struct cmd_find_state *fs, const char *session)
+{
+5634 : static int
+cmd_find_get_window(struct cmd_find_state *fs, const char *window)
+{
+5670 : static int
+cmd_find_get_window_with_session(struct cmd_find_state *fs, const char *window)
+{
+5821 : static int
+cmd_find_get_pane(struct cmd_find_state *fs, const char *pane)
+{
+5858 : static int
+cmd_find_get_pane_with_session(struct cmd_find_state *fs, const char *pane)
+{
+5885 : static int
+cmd_find_get_pane_with_window(struct cmd_find_state *fs, const char *pane)
+{
+5968 : 
+void
+cmd_find_clear_state(struct cmd_find_state *fs, struct cmdq_item *item,
+    int flags)
+{
+5980 : 
+int
+cmd_find_empty_state(struct cmd_find_state *fs)
+{
+5989 : 
+int
+cmd_find_valid_state(struct cmd_find_state *fs)
+{
+6016 : 
+void
+cmd_find_copy_state(struct cmd_find_state *dst, struct cmd_find_state *src)
+{
+6027 : 
+void
+cmd_find_log_state(const char *prefix, struct cmd_find_state *fs)
+{
+6050 : 
+int
+cmd_find_from_session(struct cmd_find_state *fs, struct session *s)
+{
+6066 : 
+int
+cmd_find_from_winlink(struct cmd_find_state *fs, struct session *s,
+    struct winlink *wl)
+{
+6082 : 
+int
+cmd_find_from_session_window(struct cmd_find_state *fs, struct session *s,
+    struct window *w)
+{
+6098 : 
+int
+cmd_find_from_window(struct cmd_find_state *fs, struct window *w)
+{
+6115 : 
+int
+cmd_find_from_pane(struct cmd_find_state *fs, struct window_pane *wp)
+{
+6129 : 
+int
+cmd_find_current(struct cmd_find_state *fs, struct cmdq_item *item, int flags)
+{
+6147 : 
+int
+cmd_find_target(struct cmd_find_state *fs, struct cmd_find_state *current,
+    struct cmdq_item *item, const char *target, enum cmd_find_type type,
+    int flags)
+{
+6413 :  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{
+6546 :  session *
+cmd_find_try_TMUX(struct client *c, struct window *w)
+{
+6573 : static int
+cmd_find_client_better(struct client *c, struct client *than)
+{
+6582 :  client *
+cmd_find_best_client(struct client **clist[], u_int csize)
+{
+6608 : static int
+cmd_find_session_better(struct session *s, struct session *than, int flags)
+{
+6626 :  session *
+cmd_find_best_session(struct session **slist, u_int ssize, int flags)
+{
+6648 : static int
+cmd_find_best_session_with_window(struct cmd_find_state *fs)
+{
+6685 : static int
+cmd_find_best_winlink_with_window(struct cmd_find_state *fs)
+{
+6709 : static int
+cmd_find_current_session_with_client(struct cmd_find_state *fs)
+{
+6773 : static int
+cmd_find_current_session(struct cmd_find_state *fs)
+{
+6803 :  client *
+cmd_find_current_client(struct cmdq_item *item)
+{
+6862 : static int
+cmd_find_get_session(struct cmd_find_state *fs, const char *session)
+{
+6926 : static int
+cmd_find_get_window(struct cmd_find_state *fs, const char *window)
+{
+6962 : static int
+cmd_find_get_window_with_session(struct cmd_find_state *fs, const char *window)
+{
+7113 : static int
+cmd_find_get_pane(struct cmd_find_state *fs, const char *pane)
+{
+7150 : static int
+cmd_find_get_pane_with_session(struct cmd_find_state *fs, const char *pane)
+{
+7177 : static int
+cmd_find_get_pane_with_window(struct cmd_find_state *fs, const char *pane)
+{
+7260 : 
+void
+cmd_find_clear_state(struct cmd_find_state *fs, struct cmdq_item *item,
+    int flags)
+{
+7272 : 
+int
+cmd_find_empty_state(struct cmd_find_state *fs)
+{
+7281 : 
+int
+cmd_find_valid_state(struct cmd_find_state *fs)
+{
+7308 : 
+void
+cmd_find_copy_state(struct cmd_find_state *dst, struct cmd_find_state *src)
+{
+7319 : 
+void
+cmd_find_log_state(const char *prefix, struct cmd_find_state *fs)
+{
+7342 : 
+int
+cmd_find_from_session(struct cmd_find_state *fs, struct session *s)
+{
+7358 : 
+int
+cmd_find_from_winlink(struct cmd_find_state *fs, struct session *s,
+    struct winlink *wl)
+{
+7374 : 
+int
+cmd_find_from_session_window(struct cmd_find_state *fs, struct session *s,
+    struct window *w)
+{
+7390 : 
+int
+cmd_find_from_window(struct cmd_find_state *fs, struct window *w)
+{
+7407 : 
+int
+cmd_find_from_pane(struct cmd_find_state *fs, struct window_pane *wp)
+{
+7421 : 
+int
+cmd_find_current(struct cmd_find_state *fs, struct cmdq_item *item, int flags)
+{
+7439 : 
+int
+cmd_find_target(struct cmd_find_state *fs, struct cmd_find_state *current,
+    struct cmdq_item *item, const char *target, enum cmd_find_type type,
+    int flags)
+{
+7705 :  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{
+7838 :  session *
+cmd_find_try_TMUX(struct client *c, struct window *w)
+{
+7865 : static int
+cmd_find_client_better(struct client *c, struct client *than)
+{
+7874 :  client *
+cmd_find_best_client(struct client **clist[], u_int csize)
+{
+7900 : static int
+cmd_find_session_better(struct session *s, struct session *than, int flags)
+{
+7918 :  session *
+cmd_find_best_session(struct session **slist, u_int ssize, int flags)
+{
+7940 : static int
+cmd_find_best_session_with_window(struct cmd_find_state *fs)
+{
+7977 : static int
+cmd_find_best_winlink_with_window(struct cmd_find_state *fs)
+{
+8001 : static int
+cmd_find_current_session_with_client(struct cmd_find_state *fs)
+{
+8065 : static int
+cmd_find_current_session(struct cmd_find_state *fs)
+{
+8095 :  client *
+cmd_find_current_client(struct cmdq_item *item)
+{
+8154 : static int
+cmd_find_get_session(struct cmd_find_state *fs, const char *session)
+{
+8218 : static int
+cmd_find_get_window(struct cmd_find_state *fs, const char *window)
+{
+8254 : static int
+cmd_find_get_window_with_session(struct cmd_find_state *fs, const char *window)
+{
+8405 : static int
+cmd_find_get_pane(struct cmd_find_state *fs, const char *pane)
+{
+8442 : static int
+cmd_find_get_pane_with_session(struct cmd_find_state *fs, const char *pane)
+{
+8469 : static int
+cmd_find_get_pane_with_window(struct cmd_find_state *fs, const char *pane)
+{
+8552 : 
+void
+cmd_find_clear_state(struct cmd_find_state *fs, struct cmdq_item *item,
+    int flags)
+{
+8564 : 
+int
+cmd_find_empty_state(struct cmd_find_state *fs)
+{
+8573 : 
+int
+cmd_find_valid_state(struct cmd_find_state *fs)
+{
+8600 : 
+void
+cmd_find_copy_state(struct cmd_find_state *dst, struct cmd_find_state *src)
+{
+8611 : 
+void
+cmd_find_log_state(const char *prefix, struct cmd_find_state *fs)
+{
+8634 : 
+int
+cmd_find_from_session(struct cmd_find_state *fs, struct session *s)
+{
+8650 : 
+int
+cmd_find_from_winlink(struct cmd_find_state *fs, struct session *s,
+    struct winlink *wl)
+{
+8666 : 
+int
+cmd_find_from_session_window(struct cmd_find_state *fs, struct session *s,
+    struct window *w)
+{
+8682 : 
+int
+cmd_find_from_window(struct cmd_find_state *fs, struct window *w)
+{
+8699 : 
+int
+cmd_find_from_pane(struct cmd_find_state *fs, struct window_pane *wp)
+{
+8713 : 
+int
+cmd_find_current(struct cmd_find_state *fs, struct cmdq_item *item, int flags)
+{
+8731 : 
+int
+cmd_find_target(struct cmd_find_state *fs, struct cmd_find_state *current,
+    struct cmdq_item *item, const char *target, enum cmd_find_type type,
+    int flags)
+{
+8997 :  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{
+9130 :  session *
+cmd_find_try_TMUX(struct client *c, struct window *w)
+{
+9157 : static int
+cmd_find_client_better(struct client *c, struct client *than)
+{
+9166 :  client *
+cmd_find_best_client(struct client **clist[], u_int csize)
+{
+9192 : static int
+cmd_find_session_better(struct session *s, struct session *than, int flags)
+{
+9210 :  session *
+cmd_find_best_session(struct session **slist, u_int ssize, int flags)
+{
+9232 : static int
+cmd_find_best_session_with_window(struct cmd_find_state *fs)
+{
+9269 : static int
+cmd_find_best_winlink_with_window(struct cmd_find_state *fs)
+{
+9293 : static int
+cmd_find_current_session_with_client(struct cmd_find_state *fs)
+{
+9357 : static int
+cmd_find_current_session(struct cmd_find_state *fs)
+{
+9387 :  client *
+cmd_find_current_client(struct cmdq_item *item)
+{
+9446 : static int
+cmd_find_get_session(struct cmd_find_state *fs, const char *session)
+{
+9510 : static int
+cmd_find_get_window(struct cmd_find_state *fs, const char *window)
+{
+9546 : static int
+cmd_find_get_window_with_session(struct cmd_find_state *fs, const char *window)
+{
+9697 : static int
+cmd_find_get_pane(struct cmd_find_state *fs, const char *pane)
+{
+9734 : static int
+cmd_find_get_pane_with_session(struct cmd_find_state *fs, const char *pane)
+{
+9761 : static int
+cmd_find_get_pane_with_window(struct cmd_find_state *fs, const char *pane)
+{
+9844 : 
+void
+cmd_find_clear_state(struct cmd_find_state *fs, struct cmdq_item *item,
+    int flags)
+{
+9856 : 
+int
+cmd_find_empty_state(struct cmd_find_state *fs)
+{
+9865 : 
+int
+cmd_find_valid_state(struct cmd_find_state *fs)
+{
+9892 : 
+void
+cmd_find_copy_state(struct cmd_find_state *dst, struct cmd_find_state *src)
+{
+9903 : 
+void
+cmd_find_log_state(const char *prefix, struct cmd_find_state *fs)
+{
+9926 : 
+int
+cmd_find_from_session(struct cmd_find_state *fs, struct session *s)
+{
+9942 : 
+int
+cmd_find_from_winlink(struct cmd_find_state *fs, struct session *s,
+    struct winlink *wl)
+{
+9958 : 
+int
+cmd_find_from_session_window(struct cmd_find_state *fs, struct session *s,
+    struct window *w)
+{
+9974 : 
+int
+cmd_find_from_window(struct cmd_find_state *fs, struct window *w)
+{
+9991 : 
+int
+cmd_find_from_pane(struct cmd_find_state *fs, struct window_pane *wp)
+{
+10005 : 
+int
+cmd_find_current(struct cmd_find_state *fs, struct cmdq_item *item, int flags)
+{
+10023 : 
+int
+cmd_find_target(struct cmd_find_state *fs, struct cmd_find_state *current,
+    struct cmdq_item *item, const char *target, enum cmd_find_type type,
+    int flags)
+{
+10289 :  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{
+10422 :  session *
+cmd_find_try_TMUX(struct client *c, struct window *w)
+{
+10449 : static int
+cmd_find_client_better(struct client *c, struct client *than)
+{
+10458 :  client *
+cmd_find_best_client(struct client **clist[], u_int csize)
+{
+10484 : static int
+cmd_find_session_better(struct session *s, struct session *than, int flags)
+{
+10502 :  session *
+cmd_find_best_session(struct session **slist, u_int ssize, int flags)
+{
+10524 : static int
+cmd_find_best_session_with_window(struct cmd_find_state *fs)
+{
+10561 : static int
+cmd_find_best_winlink_with_window(struct cmd_find_state *fs)
+{
+10585 : static int
+cmd_find_current_session_with_client(struct cmd_find_state *fs)
+{
+10649 : static int
+cmd_find_current_session(struct cmd_find_state *fs)
+{
+10679 :  client *
+cmd_find_current_client(struct cmdq_item *item)
+{
+10738 : static int
+cmd_find_get_session(struct cmd_find_state *fs, const char *session)
+{
+10802 : static int
+cmd_find_get_window(struct cmd_find_state *fs, const char *window)
+{
+10838 : static int
+cmd_find_get_window_with_session(struct cmd_find_state *fs, const char *window)
+{
+10989 : static int
+cmd_find_get_pane(struct cmd_find_state *fs, const char *pane)
+{
+11026 : static int
+cmd_find_get_pane_with_session(struct cmd_find_state *fs, const char *pane)
+{
+11053 : static int
+cmd_find_get_pane_with_window(struct cmd_find_state *fs, const char *pane)
+{
+11136 : 
+void
+cmd_find_clear_state(struct cmd_find_state *fs, struct cmdq_item *item,
+    int flags)
+{
+11148 : 
+int
+cmd_find_empty_state(struct cmd_find_state *fs)
+{
+11157 : 
+int
+cmd_find_valid_state(struct cmd_find_state *fs)
+{
+11184 : 
+void
+cmd_find_copy_state(struct cmd_find_state *dst, struct cmd_find_state *src)
+{
+11195 : 
+void
+cmd_find_log_state(const char *prefix, struct cmd_find_state *fs)
+{
+11218 : 
+int
+cmd_find_from_session(struct cmd_find_state *fs, struct session *s)
+{
+11234 : 
+int
+cmd_find_from_winlink(struct cmd_find_state *fs, struct session *s,
+    struct winlink *wl)
+{
+11250 : 
+int
+cmd_find_from_session_window(struct cmd_find_state *fs, struct session *s,
+    struct window *w)
+{
+11266 : 
+int
+cmd_find_from_window(struct cmd_find_state *fs, struct window *w)
+{
+11283 : 
+int
+cmd_find_from_pane(struct cmd_find_state *fs, struct window_pane *wp)
+{
+11297 : 
+int
+cmd_find_current(struct cmd_find_state *fs, struct cmdq_item *item, int flags)
+{
+11315 : 
+int
+cmd_find_target(struct cmd_find_state *fs, struct cmd_find_state *current,
+    struct cmdq_item *item, const char *target, enum cmd_find_type type,
+    int flags)
+{
+11581 :  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{
+11714 :  session *
+cmd_find_try_TMUX(struct client *c, struct window *w)
+{
+11741 : static int
+cmd_find_client_better(struct client *c, struct client *than)
+{
+11750 :  client *
+cmd_find_best_client(struct client **clist[], u_int csize)
+{
+11776 : static int
+cmd_find_session_better(struct session *s, struct session *than, int flags)
+{
+11794 :  session *
+cmd_find_best_session(struct session **slist, u_int ssize, int flags)
+{
+11816 : static int
+cmd_find_best_session_with_window(struct cmd_find_state *fs)
+{
+11853 : static int
+cmd_find_best_winlink_with_window(struct cmd_find_state *fs)
+{
+11877 : static int
+cmd_find_current_session_with_client(struct cmd_find_state *fs)
+{
+11941 : static int
+cmd_find_current_session(struct cmd_find_state *fs)
+{
+11971 :  client *
+cmd_find_current_client(struct cmdq_item *item)
+{
+12030 : static int
+cmd_find_get_session(struct cmd_find_state *fs, const char *session)
+{
+12094 : static int
+cmd_find_get_window(struct cmd_find_state *fs, const char *window)
+{
+12130 : static int
+cmd_find_get_window_with_session(struct cmd_find_state *fs, const char *window)
+{
+12281 : static int
+cmd_find_get_pane(struct cmd_find_state *fs, const char *pane)
+{
+12318 : static int
+cmd_find_get_pane_with_session(struct cmd_find_state *fs, const char *pane)
+{
+12345 : static int
+cmd_find_get_pane_with_window(struct cmd_find_state *fs, const char *pane)
+{
+12428 : 
+void
+cmd_find_clear_state(struct cmd_find_state *fs, struct cmdq_item *item,
+    int flags)
+{
+12440 : 
+int
+cmd_find_empty_state(struct cmd_find_state *fs)
+{
+12449 : 
+int
+cmd_find_valid_state(struct cmd_find_state *fs)
+{
+12476 : 
+void
+cmd_find_copy_state(struct cmd_find_state *dst, struct cmd_find_state *src)
+{
+12487 : 
+void
+cmd_find_log_state(const char *prefix, struct cmd_find_state *fs)
+{
+12510 : 
+int
+cmd_find_from_session(struct cmd_find_state *fs, struct session *s)
+{
+12526 : 
+int
+cmd_find_from_winlink(struct cmd_find_state *fs, struct session *s,
+    struct winlink *wl)
+{
+12542 : 
+int
+cmd_find_from_session_window(struct cmd_find_state *fs, struct session *s,
+    struct window *w)
+{
+12558 : 
+int
+cmd_find_from_window(struct cmd_find_state *fs, struct window *w)
+{
+12575 : 
+int
+cmd_find_from_pane(struct cmd_find_state *fs, struct window_pane *wp)
+{
+12589 : 
+int
+cmd_find_current(struct cmd_find_state *fs, struct cmdq_item *item, int flags)
+{
+12607 : 
+int
+cmd_find_target(struct cmd_find_state *fs, struct cmd_find_state *current,
+    struct cmdq_item *item, const char *target, enum cmd_find_type type,
+    int flags)
+{
+12873 :  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{
+
+Fun Line : static int
+cmd_find_client_better(struct client *c, struct client *than)
+{ 113
+
+Fun Line :  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{ 1245
+
+Fun Line :  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{ 1245
+
+Fun Line :  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{ 1245
+
+Fun Line : static int
+cmd_find_client_better(struct client *c, struct client *than)
+{ 1405
+
+Fun Line :  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{ 2537
+
+Fun Line :  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{ 2537
+
+Fun Line :  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{ 2537
+
+Fun Line : static int
+cmd_find_client_better(struct client *c, struct client *than)
+{ 2697
+
+Fun Line :  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{ 3829
+
+Fun Line :  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{ 3829
+
+Fun Line :  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{ 3829
+
+Fun Line : static int
+cmd_find_client_better(struct client *c, struct client *than)
+{ 3989
+
+Fun Line :  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{ 5121
+
+Fun Line :  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{ 5121
+
+Fun Line :  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{ 5121
+
+Fun Line : static int
+cmd_find_client_better(struct client *c, struct client *than)
+{ 5281
+
+Fun Line :  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{ 6413
+
+Fun Line :  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{ 6413
+
+Fun Line :  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{ 6413
+
+Fun Line : static int
+cmd_find_client_better(struct client *c, struct client *than)
+{ 6573
+
+Fun Line :  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{ 7705
+
+Fun Line :  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{ 7705
+
+Fun Line :  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{ 7705
+
+Fun Line : static int
+cmd_find_client_better(struct client *c, struct client *than)
+{ 7865
+
+Fun Line :  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{ 8997
+
+Fun Line :  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{ 8997
+
+Fun Line :  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{ 8997
+
+Fun Line : static int
+cmd_find_client_better(struct client *c, struct client *than)
+{ 9157
+
+Fun Line :  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{ 10289
+
+Fun Line :  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{ 10289
+
+Fun Line :  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{ 10289
+
+Fun Line : static int
+cmd_find_client_better(struct client *c, struct client *than)
+{ 10449
+
+Fun Line :  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{ 11581
+
+Fun Line :  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{ 11581
+
+Fun Line :  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{ 11581
+
+Fun Line : static int
+cmd_find_client_better(struct client *c, struct client *than)
+{ 11741
+
+Fun Line :  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{ 12873
+
+Fun Line :  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{ 12873
+
+Fun Line :  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{ 12873
+========================================================================================
+Change No : 1
+========================================================================================
+1 : 32461 2 : 36692Trying to add changes near function -  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{
+Addition of line '
+ 	    10*19;
+' SKIPPED!!!
+Change is below the following line, but same is not present in new file
+}
+
+	/* If no client found, report an error. */
+	if (c == NULL && !quiet)
+Near Line no : 1
+========================================================================================
+Change No : 2
+========================================================================================
+1 : 32461 2 : 36692Trying to add changes near function -  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{
+Changed below lines 
+From : 
+ 		if (strcmp(copy, path + (sizeof _PATH_DEV) - 1) == 0)
+
+To : 
+
+ 		if (strcmp(coy, path + (sizeof _PATH_DEV) - 1) == 0)
+Near Line no : 1322
+Below the following line 
+	if (strncmp(path, _PATH_DEV, (sizeof _PATH_DEV) - 1) != 0)
+			continue;
+
+========================================================================================
+Change No : 3
+========================================================================================
+1 : 32461 2 : 36691Trying to add changes near function -  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{
+Changed below lines 
+From : 
+ 	struct client	*c;
+ 	char		*copy;
+ 	size_t		 size;
+ 	const char	*path;
+
+To : 
+
+ 
+Near Line no : 1289
+Below the following line 
+{
+
+========================================================================================
+Change No : 4
+========================================================================================
+1 : 3654 2 : 3902Trying to add changes near function - static int
+cmd_find_client_better(struct client *c, struct client *than)
+{
+Changing of below lines SKIPPED!!!
+From :  cmd_find_best_client(struct client **clist[], u_int csize)
+
+To : 
+ cmd_find_best_client(struct client **clist, u_int csize)
+
+Change is below the following line, but same is not present in new file st client from a list, or all if list is NULL. */
+static struct client *
+
+========================================================================================
+Change No : 5
+========================================================================================
+1 : 32461 2 : 36624Trying to add changes near function -  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{
+Addition of line '
+ 	    10*19;
+' SKIPPED!!!
+Change is below the following line, but same is not present in new file
+}
+
+	/* If no client found, report an error. */
+	if (c == NULL && !quiet)
+Near Line no : 1
+========================================================================================
+Change No : 6
+========================================================================================
+1 : 32461 2 : 36624Trying to add changes near function -  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{
+Changing of below lines SKIPPED!!!
+From :  		if (strcmp(copy, path + (sizeof _PATH_DEV) - 1) == 0)
+
+To : 
+ 		if (strcmp(coy, path + (sizeof _PATH_DEV) - 1) == 0)
+
+Reason : cant find line to be changed :- 
+ 		if (strcmp(copy, path + (sizeof _PATH_DEV) - 1) == 0)
+
+========================================================================================
+Change No : 7
+========================================================================================
+1 : 32461 2 : 36624Trying to add changes near function -  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{
+Changing of below lines SKIPPED!!!
+From :  	struct client	*c;
+ 	char		*copy;
+ 	size_t		 size;
+ 	const char	*path;
+
+To : 
+ 
+
+Reason : cant find line to be changed :- 
+ 	struct client	*c;
+ 	char		*copy;
+ 	size_t		 size;
+ 	const char	*path;
+
+========================================================================================
+Change No : 8
+========================================================================================
+1 : 3654 2 : 3902Trying to add changes near function - static int
+cmd_find_client_better(struct client *c, struct client *than)
+{
+Changing of below lines SKIPPED!!!
+From :  cmd_find_best_client(struct client **clist[], u_int csize)
+
+To : 
+ cmd_find_best_client(struct client **clist, u_int csize)
+
+Change is below the following line, but same is not present in new file st client from a list, or all if list is NULL. */
+static struct client *
+
+========================================================================================
+Change No : 9
+========================================================================================
+1 : 32461 2 : 36624Trying to add changes near function -  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{
+Addition of line '
+ 	    10*19;
+' SKIPPED!!!
+Change is below the following line, but same is not present in new file
+}
+
+	/* If no client found, report an error. */
+	if (c == NULL && !quiet)
+Near Line no : 1
+========================================================================================
+Change No : 10
+========================================================================================
+1 : 32461 2 : 36624Trying to add changes near function -  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{
+Changing of below lines SKIPPED!!!
+From :  		if (strcmp(copy, path + (sizeof _PATH_DEV) - 1) == 0)
+
+To : 
+ 		if (strcmp(coy, path + (sizeof _PATH_DEV) - 1) == 0)
+
+Reason : cant find line to be changed :- 
+ 		if (strcmp(copy, path + (sizeof _PATH_DEV) - 1) == 0)
+
+========================================================================================
+Change No : 11
+========================================================================================
+1 : 32461 2 : 36624Trying to add changes near function -  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{
+Changing of below lines SKIPPED!!!
+From :  	struct client	*c;
+ 	char		*copy;
+ 	size_t		 size;
+ 	const char	*path;
+
+To : 
+ 
+
+Reason : cant find line to be changed :- 
+ 	struct client	*c;
+ 	char		*copy;
+ 	size_t		 size;
+ 	const char	*path;
+
+========================================================================================
+Change No : 12
+========================================================================================
+1 : 3654 2 : 3902Trying to add changes near function - static int
+cmd_find_client_better(struct client *c, struct client *than)
+{
+Changing of below lines SKIPPED!!!
+From :  cmd_find_best_client(struct client **clist[], u_int csize)
+
+To : 
+ cmd_find_best_client(struct client **clist, u_int csize)
+
+Change is below the following line, but same is not present in new file st client from a list, or all if list is NULL. */
+static struct client *
+
+========================================================================================
+Change No : 13
+========================================================================================
+1 : 32461 2 : 36624Trying to add changes near function -  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{
+Addition of line '
+ 	    10*19;
+' SKIPPED!!!
+Change is below the following line, but same is not present in new file
+}
+
+	/* If no client found, report an error. */
+	if (c == NULL && !quiet)
+Near Line no : 1
+========================================================================================
+Change No : 14
+========================================================================================
+1 : 32461 2 : 36624Trying to add changes near function -  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{
+Changing of below lines SKIPPED!!!
+From :  		if (strcmp(copy, path + (sizeof _PATH_DEV) - 1) == 0)
+
+To : 
+ 		if (strcmp(coy, path + (sizeof _PATH_DEV) - 1) == 0)
+
+Reason : cant find line to be changed :- 
+ 		if (strcmp(copy, path + (sizeof _PATH_DEV) - 1) == 0)
+
+========================================================================================
+Change No : 15
+========================================================================================
+1 : 32461 2 : 36624Trying to add changes near function -  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{
+Changing of below lines SKIPPED!!!
+From :  	struct client	*c;
+ 	char		*copy;
+ 	size_t		 size;
+ 	const char	*path;
+
+To : 
+ 
+
+Reason : cant find line to be changed :- 
+ 	struct client	*c;
+ 	char		*copy;
+ 	size_t		 size;
+ 	const char	*path;
+
+========================================================================================
+Change No : 16
+========================================================================================
+1 : 3654 2 : 3902Trying to add changes near function - static int
+cmd_find_client_better(struct client *c, struct client *than)
+{
+Changing of below lines SKIPPED!!!
+From :  cmd_find_best_client(struct client **clist[], u_int csize)
+
+To : 
+ cmd_find_best_client(struct client **clist, u_int csize)
+
+Change is below the following line, but same is not present in new file st client from a list, or all if list is NULL. */
+static struct client *
+
+========================================================================================
+Change No : 17
+========================================================================================
+1 : 32461 2 : 36624Trying to add changes near function -  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{
+Addition of line '
+ 	    10*19;
+' SKIPPED!!!
+Change is below the following line, but same is not present in new file
+}
+
+	/* If no client found, report an error. */
+	if (c == NULL && !quiet)
+Near Line no : 1
+========================================================================================
+Change No : 18
+========================================================================================
+1 : 32461 2 : 36624Trying to add changes near function -  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{
+Changing of below lines SKIPPED!!!
+From :  		if (strcmp(copy, path + (sizeof _PATH_DEV) - 1) == 0)
+
+To : 
+ 		if (strcmp(coy, path + (sizeof _PATH_DEV) - 1) == 0)
+
+Reason : cant find line to be changed :- 
+ 		if (strcmp(copy, path + (sizeof _PATH_DEV) - 1) == 0)
+
+========================================================================================
+Change No : 19
+========================================================================================
+1 : 32461 2 : 36624Trying to add changes near function -  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{
+Changing of below lines SKIPPED!!!
+From :  	struct client	*c;
+ 	char		*copy;
+ 	size_t		 size;
+ 	const char	*path;
+
+To : 
+ 
+
+Reason : cant find line to be changed :- 
+ 	struct client	*c;
+ 	char		*copy;
+ 	size_t		 size;
+ 	const char	*path;
+
+========================================================================================
+Change No : 20
+========================================================================================
+1 : 3654 2 : 3902Trying to add changes near function - static int
+cmd_find_client_better(struct client *c, struct client *than)
+{
+Changing of below lines SKIPPED!!!
+From :  cmd_find_best_client(struct client **clist[], u_int csize)
+
+To : 
+ cmd_find_best_client(struct client **clist, u_int csize)
+
+Change is below the following line, but same is not present in new file st client from a list, or all if list is NULL. */
+static struct client *
+
+========================================================================================
+Change No : 21
+========================================================================================
+1 : 32461 2 : 36624Trying to add changes near function -  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{
+Addition of line '
+ 	    10*19;
+' SKIPPED!!!
+Change is below the following line, but same is not present in new file
+}
+
+	/* If no client found, report an error. */
+	if (c == NULL && !quiet)
+Near Line no : 1
+========================================================================================
+Change No : 22
+========================================================================================
+1 : 32461 2 : 36624Trying to add changes near function -  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{
+Changing of below lines SKIPPED!!!
+From :  		if (strcmp(copy, path + (sizeof _PATH_DEV) - 1) == 0)
+
+To : 
+ 		if (strcmp(coy, path + (sizeof _PATH_DEV) - 1) == 0)
+
+Reason : cant find line to be changed :- 
+ 		if (strcmp(copy, path + (sizeof _PATH_DEV) - 1) == 0)
+
+========================================================================================
+Change No : 23
+========================================================================================
+1 : 32461 2 : 36624Trying to add changes near function -  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{
+Changing of below lines SKIPPED!!!
+From :  	struct client	*c;
+ 	char		*copy;
+ 	size_t		 size;
+ 	const char	*path;
+
+To : 
+ 
+
+Reason : cant find line to be changed :- 
+ 	struct client	*c;
+ 	char		*copy;
+ 	size_t		 size;
+ 	const char	*path;
+
+========================================================================================
+Change No : 24
+========================================================================================
+1 : 3654 2 : 3902Trying to add changes near function - static int
+cmd_find_client_better(struct client *c, struct client *than)
+{
+Changing of below lines SKIPPED!!!
+From :  cmd_find_best_client(struct client **clist[], u_int csize)
+
+To : 
+ cmd_find_best_client(struct client **clist, u_int csize)
+
+Change is below the following line, but same is not present in new file st client from a list, or all if list is NULL. */
+static struct client *
+
+========================================================================================
+Change No : 25
+========================================================================================
+1 : 32461 2 : 36624Trying to add changes near function -  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{
+Addition of line '
+ 	    10*19;
+' SKIPPED!!!
+Change is below the following line, but same is not present in new file
+}
+
+	/* If no client found, report an error. */
+	if (c == NULL && !quiet)
+Near Line no : 1
+========================================================================================
+Change No : 26
+========================================================================================
+1 : 32461 2 : 36624Trying to add changes near function -  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{
+Changing of below lines SKIPPED!!!
+From :  		if (strcmp(copy, path + (sizeof _PATH_DEV) - 1) == 0)
+
+To : 
+ 		if (strcmp(coy, path + (sizeof _PATH_DEV) - 1) == 0)
+
+Reason : cant find line to be changed :- 
+ 		if (strcmp(copy, path + (sizeof _PATH_DEV) - 1) == 0)
+
+========================================================================================
+Change No : 27
+========================================================================================
+1 : 32461 2 : 36624Trying to add changes near function -  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{
+Changing of below lines SKIPPED!!!
+From :  	struct client	*c;
+ 	char		*copy;
+ 	size_t		 size;
+ 	const char	*path;
+
+To : 
+ 
+
+Reason : cant find line to be changed :- 
+ 	struct client	*c;
+ 	char		*copy;
+ 	size_t		 size;
+ 	const char	*path;
+
+========================================================================================
+Change No : 28
+========================================================================================
+1 : 3654 2 : 3902Trying to add changes near function - static int
+cmd_find_client_better(struct client *c, struct client *than)
+{
+Changing of below lines SKIPPED!!!
+From :  cmd_find_best_client(struct client **clist[], u_int csize)
+
+To : 
+ cmd_find_best_client(struct client **clist, u_int csize)
+
+Change is below the following line, but same is not present in new file st client from a list, or all if list is NULL. */
+static struct client *
+
+========================================================================================
+Change No : 29
+========================================================================================
+1 : 32461 2 : 36624Trying to add changes near function -  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{
+Addition of line '
+ 	    10*19;
+' SKIPPED!!!
+Change is below the following line, but same is not present in new file
+}
+
+	/* If no client found, report an error. */
+	if (c == NULL && !quiet)
+Near Line no : 1
+========================================================================================
+Change No : 30
+========================================================================================
+1 : 32461 2 : 36624Trying to add changes near function -  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{
+Changing of below lines SKIPPED!!!
+From :  		if (strcmp(copy, path + (sizeof _PATH_DEV) - 1) == 0)
+
+To : 
+ 		if (strcmp(coy, path + (sizeof _PATH_DEV) - 1) == 0)
+
+Reason : cant find line to be changed :- 
+ 		if (strcmp(copy, path + (sizeof _PATH_DEV) - 1) == 0)
+
+========================================================================================
+Change No : 31
+========================================================================================
+1 : 32461 2 : 36624Trying to add changes near function -  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{
+Changing of below lines SKIPPED!!!
+From :  	struct client	*c;
+ 	char		*copy;
+ 	size_t		 size;
+ 	const char	*path;
+
+To : 
+ 
+
+Reason : cant find line to be changed :- 
+ 	struct client	*c;
+ 	char		*copy;
+ 	size_t		 size;
+ 	const char	*path;
+
+========================================================================================
+Change No : 32
+========================================================================================
+1 : 3654 2 : 3902Trying to add changes near function - static int
+cmd_find_client_better(struct client *c, struct client *than)
+{
+Changing of below lines SKIPPED!!!
+From :  cmd_find_best_client(struct client **clist[], u_int csize)
+
+To : 
+ cmd_find_best_client(struct client **clist, u_int csize)
+
+Change is below the following line, but same is not present in new file st client from a list, or all if list is NULL. */
+static struct client *
+
+========================================================================================
+Change No : 33
+========================================================================================
+1 : 32461 2 : 36624Trying to add changes near function -  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{
+Addition of line '
+ 	    10*19;
+' SKIPPED!!!
+Change is below the following line, but same is not present in new file
+}
+
+	/* If no client found, report an error. */
+	if (c == NULL && !quiet)
+Near Line no : 1
+========================================================================================
+Change No : 34
+========================================================================================
+1 : 32461 2 : 36624Trying to add changes near function -  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{
+Changing of below lines SKIPPED!!!
+From :  		if (strcmp(copy, path + (sizeof _PATH_DEV) - 1) == 0)
+
+To : 
+ 		if (strcmp(coy, path + (sizeof _PATH_DEV) - 1) == 0)
+
+Reason : cant find line to be changed :- 
+ 		if (strcmp(copy, path + (sizeof _PATH_DEV) - 1) == 0)
+
+========================================================================================
+Change No : 35
+========================================================================================
+1 : 32461 2 : 36624Trying to add changes near function -  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{
+Changing of below lines SKIPPED!!!
+From :  	struct client	*c;
+ 	char		*copy;
+ 	size_t		 size;
+ 	const char	*path;
+
+To : 
+ 
+
+Reason : cant find line to be changed :- 
+ 	struct client	*c;
+ 	char		*copy;
+ 	size_t		 size;
+ 	const char	*path;
+
+========================================================================================
+Change No : 36
+========================================================================================
+1 : 3654 2 : 3902Trying to add changes near function - static int
+cmd_find_client_better(struct client *c, struct client *than)
+{
+Changing of below lines SKIPPED!!!
+From :  cmd_find_best_client(struct client **clist[], u_int csize)
+
+To : 
+ cmd_find_best_client(struct client **clist, u_int csize)
+
+Change is below the following line, but same is not present in new file st client from a list, or all if list is NULL. */
+static struct client *
+
+========================================================================================
+Change No : 37
+========================================================================================
+1 : 32461 2 : 36624Trying to add changes near function -  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{
+Addition of line '
+ 	    10*19;
+' SKIPPED!!!
+Change is below the following line, but same is not present in new file
+}
+
+	/* If no client found, report an error. */
+	if (c == NULL && !quiet)
+Near Line no : 1
+========================================================================================
+Change No : 38
+========================================================================================
+1 : 32461 2 : 36624Trying to add changes near function -  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{
+Changing of below lines SKIPPED!!!
+From :  		if (strcmp(copy, path + (sizeof _PATH_DEV) - 1) == 0)
+
+To : 
+ 		if (strcmp(coy, path + (sizeof _PATH_DEV) - 1) == 0)
+
+Reason : cant find line to be changed :- 
+ 		if (strcmp(copy, path + (sizeof _PATH_DEV) - 1) == 0)
+
+========================================================================================
+Change No : 39
+========================================================================================
+1 : 32461 2 : 36624Trying to add changes near function -  client *
+cmd_find_client(struct cmdq_item *item, const char *target, int quiet)
+{
+Changing of below lines SKIPPED!!!
+From :  	struct client	*c;
+ 	char		*copy;
+ 	size_t		 size;
+ 	const char	*path;
+
+To : 
+ 
+
+Reason : cant find line to be changed :- 
+ 	struct client	*c;
+ 	char		*copy;
+ 	size_t		 size;
+ 	const char	*path;
+
+========================================================================================
+Change No : 40
+========================================================================================
+1 : 3654 2 : 3902Trying to add changes near function - static int
+cmd_find_client_better(struct client *c, struct client *than)
+{
+Changing of below lines SKIPPED!!!
+From :  cmd_find_best_client(struct client **clist[], u_int csize)
+
+To : 
+ cmd_find_best_client(struct client **clist, u_int csize)
+
+Change is below the following line, but same is not present in new file st client from a list, or all if list is NULL. */
+static struct client *

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="LRecon:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/LRecon_jar</output-path>
+    <root id="archive" name="LRecon.jar">
+      <element id="module-output" name="LRecon" />
+    </root>
+  </artifact>
+</component>
